@@ -22,4 +22,18 @@ class Node
     results.concat(preorder_array(node.right))
     results
   end 
+
+  def inorder(node)
+    return unless node 
+    inorder(node.left)
+    p node.val
+    inorder(node.right)
+  end 
+
+  def postorder(node)
+    return unless node 
+    postorder(node.left)
+    postorder(node.right)
+    p node.val 
+  end 
 end 
